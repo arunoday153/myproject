@@ -1,0 +1,167 @@
+<html>
+    <head>
+        <title>Fornt-page git</title>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
+        <style>
+            body
+            {
+                margin: 0px;
+                background: white;   
+            }
+
+
+            /*navbar styling STARTS*/
+
+            nav{
+                /*                height: 50px! important;*/
+                text-shadow: 1px 1px 1px #0E0E0E;
+            }
+            .col1{
+                padding-left: 50px! important;
+            }
+            li{
+                /*                margin-top: -3px;*/
+                text-transform: uppercase;
+                text-align: center;
+                font-weight: 600;
+                font-family: sans-serif; 
+            }
+            .col1 ul li a
+            {
+                padding: 0px 25px! important;
+            }
+
+            nav ul li a:hover
+            {
+                color: grey;
+                background-color: gold;
+                height: 100%;
+            }
+
+            .sidenav
+            {
+                padding-top: 50px! important;
+                background-color: #263238! important;;
+
+            }
+
+            .sidenav li a
+            {
+                text-transform: uppercase;
+                text-align: center;
+                font-weight: 500! important;
+                font-family: sans-serif;
+                color: white! important;
+
+                text-shadow: 1px 1px 1px #0E0E0E! important
+            }
+            .sidenav li a:hover
+            {
+                color: black! important;
+                background-color: gold! important;
+                font-weight: 600! important;
+            }          
+            /*navbar styling STARTS*/
+
+
+            /*particle styling  */
+
+            #particles-js
+            {
+                height: 90%;
+                width: 100%;
+                background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+            }
+
+            /*            end of particle styling*/
+
+        </style>
+    </head>
+
+    <body style="background-color: gold">
+
+
+        <div class="navbar-fixed">
+            <nav class="black z-depth-1">
+                <div class="nav-wrapper">
+                    <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+                        <i class="material-icons">menu</i>
+                    </a>
+                    <div class="col1">
+                        <ul class=" hide-on-med-and-down">
+                            <li><a href=#>home</a></li>
+                            <li><a href=#>about</a></li>
+                            <li><a href=#>project</a></li>
+                            <li><a href=#>contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <span class="decor"></span>
+
+
+            <ul class="sidenav" id="mobile-nav">
+                <li><a href=#>home</a></li>
+                <li><a href=#>video</a></li>
+                <li><a href=#>service</a></li>
+                <li><a href=#>contact</a></li>
+            </ul>
+        </div>
+
+
+
+
+
+        <section id="particles-js">
+
+        </section>
+
+        <div style="height: 1000px; background-color: green"></div>
+        <div style="height: 1000px; background-color: grey"></div>
+
+
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.12.1/TweenMax.min.js'></script>
+        <script type="text/javascript" src="particles.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+        
+
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+
+        <script>
+            $(document).ready(function(){
+                $('.sidenav').sidenav();
+
+                $(window).scroll(function() {
+                    var currentScroll = $(this).scrollTop();
+                    console.log("-- " + ($(window).height()) + "  " + currentScroll);
+
+                    if (currentScroll < $(window).height()) {
+                        window.setTimeout(hideNav, 300);
+                    } 
+                    else {
+                        window.setTimeout(showNav, 300);
+                    }
+             });
+
+
+                function hideNav() {
+                    $(".navbar-fixed").hide();
+                }
+                hideNav();
+                function showNav() {
+                    $(".navbar-fixed").show();
+                }
+            });
+
+
+
+        </script>
+
+    </body>
+</html>
